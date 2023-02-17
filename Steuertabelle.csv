@@ -1,0 +1,17 @@
+﻿Aktion;Soll;manuell ;Relais;Aktion;Glt_Von_Dat;Glt_Bis_Dat;Glt_Von_Zeit;Glt_Bis_Zeit;Wochentag;RFID;LUX;Bewegung;Bodenfeuchte;Wasserstand;Temperatur;MaxTemp ;Modus
+Type;S;P;R;A;C>;C<;C>;C<;C;C;C;C;C;C;C;C;M
+Aktueller Wert;;;;;;;;;;;;;;;;;
+Tor oeffnen;OFF;;1;1;;;;;;294BA6818FCA;;;;;;;AUTO
+Tor oeffnen;OFF;;1;1;;;;;;211B8481B58A;;;;;;;AUTO
+Tor oeffnen;OFF;;1;1;;;;;;A94B06210FCA;;;;;;;AUTO
+Licht an;OFF;;2;3000;;;;;;;<110;1;;;;;AUTO
+Teich fuellen;OFF;15;4;ON;;;12:00:00;12:30:00;;;;;;<115;>0;;AUTO
+Regner Wall;OFF;16;5;ON;05-01;10-20;18:30:00;19:30:00;;;;;<95;;;>15;AUTO
+Regner Rasen rechts;OFF;18;7;ON;05-01;10-20;07:30:00;08:00:00;Mo;;;;<90;;;>15;AUTO
+Regner Rasen links;OFF;22;6;ON;05-01;10-20;07:30:00;08:00:00;Mo;;;;<90;;;>15;AUTO
+Pumpe;OFF;13;3;ON;01-01;12-31;07:00:00;22:00:00;;;;;;;;;AUTO
+Regner Rasen rechts;OFF;18;7;ON;05-01;10-20;07:30:00;08:00:00;Mi;;;;<90;;;>15;AUTO
+Regner Rasen links;OFF;22;6;ON;05-01;10-20;07:30:00;08:00:00;Mi;;;;<90;;;>15;AUTO
+Regner Rasen rechts;OFF;18;7;ON;05-01;10-20;07:30:00;08:00:00;Sa;;;;<90;;;>15;AUTO
+Regner Rasen links;OFF;22;6;ON;05-01;10-20;07:30:00;08:00:00;Sa;;;;<90;;;>15;AUTO
+Teichpumpen;OFF;12;8;ON;;;08:00;22:00;;;;;;;>0;;AUTO
