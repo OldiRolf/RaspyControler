@@ -5,22 +5,18 @@ from operator import truediv
 import sys
 import time
 
-from  Steuerung import refresh_Steuertabelle
-from  Steuerung import loop_Steuertabelle
-from  Steuerung import close_Steuerung
-from  Steuerung import write_Header
-from  Steuerung import write_akt_Werte
+from  Steuerung import refresh_Steuertabelle  # Steuertabelle neu einlesen 
+from  Steuerung import loop_Steuertabelle     # Function  Steuertabelle einmal abarbeiten und = True wenn Änderung in Akt_werte
+from  Steuerung import write_Header           # CSV-Header für Logfile ausgeben
+from  Steuerung import write_akt_Werte        # aktuelle Werte ins Logfile ausgeben
 
-from  Steuerung import get_soll
-from  Steuerung import get_modus
-from  Steuerung import get_akt_Wert
-from  Steuerung import Steuertabelle,Modus
-from  Steuerung import set_Steuertabelle_Wert
-from  Steuerung import Aktion_start,Aktion_ende
-
-#sys.stdout = open('stdlogfile.txt', 'w')
+from  Steuerung import get_soll               # read  ON / OFF
+from  Steuerung import get_modus              # read AUTO / ON / OFF
+from  Steuerung import get_akt_Wert           # aktueller Wert
+from  Steuerung import set_Steuertabelle_Wert # Wert in Steuertabelle eintragen --> damit auch im Logfile
 
 
+# HTML-Aufbau
 html_start = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//DE"><html>	<head><meta http-equiv="refresh" content="1"><title>Garage</title>	</head>	<body>	<table>'
 html_abschluss = '</table></body>	</html>'
 html_row_s = '<tr><th align="left"><font  face ="consolas" size="5" font color = "Red">'
@@ -30,7 +26,7 @@ html_row_e = '</th></tr>'
 
 
 loop=0
-def steuerung():
+def steuerung():   # loop_steuerung aufrufen, aktutelle Werte ins Logfile und ins HTML-File schreiben
     global loop
 
     if time.strftime("%S") == '00' and loop % 2 == 0:   #Steuertabelle refreshen , jede volle Minute und in Akt_Werte = Steuertabelle[2] eintragen
@@ -75,16 +71,16 @@ def steuerung():
         html.close
 
 
-#start
+#startup
 refresh_Steuertabelle()   #Ist_Quelle initialisieren
 print (loop,write_Header())
 x = loop_Steuertabelle()
 print(loop,write_akt_Werte())
 
-# never ending
+# never ending loop
 while True:
     loop += 1
     print(time.strftime("%H:%M:%S"),loop)
     steuerung()
-    time.sleep(0.5)
+    time.sleep(0.5)  # muss ggf. bei komplexerer Steuertabelle verringert werden
 
