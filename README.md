@@ -2,13 +2,13 @@
 universelles Steuerprogramm für Raspberry (Haus/Garten)  // universal control program to manage house and garden
 
 Die Hardware:
-![alt text](https://github.com/OldiRolf/RaspyControler/blob/main/Raspberry%20Pi%20with%20protoshield%20and%20relais%20extension.png?raw=true)
+![alt text](https://github.com/OldiRolf/RaspyControler/blob/main/docs/Raspberry%20Pi%20with%20protoshield%20and%20relais%20extension.png?raw=true)
 
 Hier will ich mein Projekt mal veröffentlichen und ggf. weiterentwickeln.
 Es handelt sich um einen RaspberryPi, der verschiedene Funktionen wie Bewässerung, Beleuchtung, Tor öffnen , ...  steuern soll.
 Welche Funktion unter welchen Bedingungen gestartet wird, wird in einer Excel-Tabelle, die als CSV-Datei gespeichert wird, festgelegt.
 
-![alt text](https://github.com/OldiRolf/RaspyControler/blob/main/Steuertabelle.png?raw=true)
+![alt text](https://github.com/OldiRolf/RaspyControler/blob/main/docs/Steuertabelle.png?raw=true)
 
 Diese wird vom  Program pro Minute einmal eingelesen, so dass die Änderungen spätestens nach einer Minute wirksam werden. 
 Im Wesentlichen beschreibt die Tabelle Aktionen (Spalten A-E) und deren Conditions (Spalten F-Q), die erfüllt sein müssen, damit die Aktion ausgeführt wird.
