@@ -10,8 +10,8 @@ Welche Funktion unter welchen Bedingungen gestartet wird, wird in einer Excel-Ta
 
 ![alt text](https://github.com/OldiRolf/RaspyControler/blob/main/Steuertabelle.png?raw=true)
 
-Diese wird vom  Program pro Minute einmal eingelesen, so dass sie Änderungen spätestens nach einer Minute wirksam werden. 
-Im Wesentlichen beschreibt die Tabelle Aktionen (Spalte A-E) und deren Conditions, die erfüllt sein müssen, damit die Aktion ausgeführt wird.
+Diese wird vom  Program pro Minute einmal eingelesen, so dass die Änderungen spätestens nach einer Minute wirksam werden. 
+Im Wesentlichen beschreibt die Tabelle Aktionen (Spalten A-E) und deren Conditions (Spalten F-Q), die erfüllt sein müssen, damit die Aktion ausgeführt wird.
 
 Besipiele:  Aktion / Bedingung
     
@@ -29,8 +29,9 @@ Regner Rasen rechts (Zeile 10) wird Relais 7 einschalten,
 Tor oeffnen (Zeile 4) wird Relais 1 für 1 Sekunde eingeschaltet,
 	wenn der RFID-Controller den Wert ……….. empfängt.
 
-Natürlich kann man das Ganze auch über ein Datenbanktabelle machen, aber deshalb eine Datenbank mit SQL etc. installieren und laufen lassen, verbraucht ziemlich viel Rescourcen und Datenbank-Features werden hier nicht benötigt – wir arbeiten die Tabelle rein sequentiell ab. Vorteil dieser Methode ist die Einfachheit und das diese einfach von anderen Rechnern aus gesteuert werden kann, in dem sie einfach auch einem Netzlaufwerk liegt.
+Natürlich kann man das Ganze auch über ein Datenbanktabelle machen, aber deshalb eine Datenbank mit SQL etc. installieren und laufen lassen, verbraucht ziemlich viel Rescourcen und Datenbank-Features werden hier nicht benötigt – wir arbeiten die Tabelle rein sequentiell ab. Vorteil dieser Methode ist die Einfachheit und das diese einfach von anderen Rechnern aus gesteuert werden kann, in dem die CSV-Datei einfach auch einem Netzlaufwerk liegt.
 
+Welche Aktionen und Bedingungen es gibt, hängt natürlich von der Beschaltung des Controllers ab. Die erste Zeile in der Tabelle enthält die Namen der Funktionen, die von Steuerung.py aus IO_Fkts.py aufgerufen werden. Somit ist Steuerung.py nicht starr für meine Konfiguration gebunden, sonder flexibel für alle möglichen Anwendungsfälle geeignet, bei denen andere Sensoren und Aktoren zum Einsatz kommen. 
 
 Dies sind meine ersten GitHub Aktivitäten. 
 Das Programm ist in der Grundversion schon seid ca. einem Jahr in Einsatz.
